@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Marriage Restoration Blueprint - Rebuilding Love & Trust</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --deep-blue: #1E3A5F;
+            --royal-blue: #2E5090;
+            --gold: #D4AF37;
+            --warm-gold: #F4E4C1;
+            --rose: #C97575;
+            --soft-rose: #F5E6E6;
+            --sage: #7A9A82;
+            --light-sage: #E8F0EA;
+            --charcoal: #2C3E50;
+            --silver: #BDC3C7;
+            --cream: #FAF8F3;
+            --text: #34495E;
+            --shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+            --elegant-gradient: linear-gradient(135deg, #1E3A5F 0%, #2E5090 50%, #D4AF37 100%);
+            --soft-gradient: linear-gradient(135deg, #FAF8F3 0%, #F4E4C1 100%);
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(180deg, #FAF8F3 0%, #F4E4C1 50%, #F5E6E6 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .screen {
+            display: none;
+            min-height: calc(100vh - 80px);
+            padding: 20px;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        .welcome-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .welcome-hearts {
+            font-size: 72px;
+            margin-bottom: 30px;
+            animation: heartbeat 2s infinite;
+            background: var(--elegant-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .elegant-header {
+            background: var(--elegant-gradient);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .elegant-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        .elegant-header h1 {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .elegant-header p {
+            font-size: 16px;
+            opacity: 0.95;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .audio-toggle {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .audio-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .premium-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(30, 58, 95, 0.15);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 18px;
+            margin: 25px 0;
+        }
+
+        .feature-tile {
+            background: linear-gradient(135deg, var(--deep-blue), var(--royal-blue));
+            color: white;
+            padding: 25px 15px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .feature-tile::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+
+        .feature-tile:hover::before {
+            opacity: 1;
+        }
+
+        .feature-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 58, 95, 0.3);
+        }
+
+        .feature-tile:nth-child(even) {
+            background: linear-gradient(135deg, var(--rose), #D08585);
+        }
+
+        .feature-tile:nth-child(3n) {
+            background: linear-gradient(135deg, var(--sage), #8AAA92);
+        }
+
+        .feature-tile .icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .feature-tile h3 {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-tile p {
+            font-size: 12px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .btn-elegant {
+            background: linear-gradient(135deg, var(--gold), #E4BF47);
+            color: var(--deep-blue);
+            border: none;
+            padding: 14px 35px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            display: inline-block;
+            text-decoration: none;
+            margin: 8px;
+            font-family: inherit;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-elegant:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--deep-blue);
+            border: 2px solid var(--deep-blue);
+            padding: 12px 35px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            margin: 8px;
+            font-family: inherit;
+        }
+
+        .btn-outline:hover {
+            background: var(--deep-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-top: 2px solid var(--gold);
+        }
+
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--text);
+            position: relative;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        .nav-item:hover::after,
+        .nav-item.active::after {
+            width: 50%;
+        }
+
+        .nav-item:hover {
+            color: var(--deep-blue);
+            background: var(--cream);
+        }
+
+        .nav-item.active {
+            color: var(--deep-blue);
+        }
+
+        .nav-item .icon {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .nav-item .label {
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .assessment-question {
+            background: var(--cream);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .assessment-options {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .assessment-option {
+            background: white;
+            border: 2px solid var(--silver);
+            padding: 15px 10px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .assessment-option:hover {
+            border-color: var(--gold);
+            background: var(--warm-gold);
+        }
+
+        .assessment-option.selected {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+        }
+
+        .devotional-card {
+            background: linear-gradient(135deg, white, var(--cream));
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .devotional-card::before {
+            content: '💑';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            opacity: 0.2;
+        }
+
+        .scripture-verse {
+            background: var(--soft-gradient);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 3px solid var(--gold);
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .forgiveness-exercise {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid var(--rose);
+            transition: all 0.3s;
+        }
+
+        .forgiveness-exercise:hover {
+            box-shadow: 0 5px 15px rgba(201, 117, 117, 0.2);
+        }
+
+        .conflict-template {
+            background: var(--light-sage);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px dashed var(--sage);
+        }
+
+        .intimacy-level {
+            background: linear-gradient(135deg, var(--soft-rose), white);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .intimacy-level:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow);
+        }
+
+        .progress-bar {
+            background: var(--silver);
+            height: 35px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .progress-fill {
+            background: linear-gradient(135deg, var(--gold), var(--deep-blue));
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            transition: width 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        .journal-area {
+            width: 100%;
+            min-height: 180px;
+            padding: 20px;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            transition: all 0.3s;
+            background: white;
+            line-height: 1.8;
+        }
+
+        .journal-area:focus {
+            outline: none;
+            border-color: var(--deep-blue);
+            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            border-top: 2px solid var(--gold);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 300;
+            color: var(--deep-blue);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: var(--text);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .trust-meter {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .trust-meter svg {
+            transform: rotate(-90deg);
+        }
+
+        .trust-meter-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .trust-meter-score {
+            font-size: 36px;
+            font-weight: 300;
+            color: var(--deep-blue);
+        }
+
+        .trust-meter-label {
+            font-size: 14px;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 58, 95, 0.9);
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.4s ease-out;
+            border-top: 5px solid var(--gold);
+        }
+
+        @keyframes slideUp {
+            from { 
+                transform: translateY(50px); 
+                opacity: 0; 
+            }
+            to { 
+                transform: translateY(0); 
+                opacity: 1; 
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--cream);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--deep-blue);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            background: var(--gold);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, var(--sage), #8AAA92);
+            color: white;
+            padding: 18px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+            animation: fadeInUp 0.5s;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(122, 154, 130, 0.3);
+        }
+
+        .quote-box {
+            background: var(--cream);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            position: relative;
+            font-style: italic;
+            text-align: center;
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .quote-box::before,
+        .quote-box::after {
+            content: '"';
+            font-size: 48px;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+        }
+
+        .quote-box::before {
+            top: 10px;
+            left: 20px;
+        }
+
+        .quote-box::after {
+            bottom: 10px;
+            right: 20px;
+        }
+
+        .tip-card {
+            background: linear-gradient(135deg, var(--warm-gold), white);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 3px solid var(--gold);
+        }
+
+        @media (max-width: 480px) {
+            .elegant-header h1 { font-size: 24px; }
+            .feature-grid { grid-template-columns: repeat(2, 1fr); }
+            .assessment-options { grid-template-columns: repeat(3, 1fr); }
+            .modal-content { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen active">
+        <div class="welcome-container">
+            <div class="welcome-hearts">💑</div>
+            <h1 style="color: var(--deep-blue); font-size: 36px; margin-bottom: 20px; font-weight: 300;">
+                Your Marriage Can Be Restored
+            </h1>
+            <p style="color: var(--text); line-height: 1.8; font-size: 18px; margin-bottom: 30px;">
+                Whether you're facing broken trust, poor communication, or growing distance, 
+                there is hope for your marriage.
+                <br><br>
+                <strong>This blueprint will guide you step by step</strong> through assessment, 
+                healing exercises, and practical tools to rebuild your relationship on a foundation 
+                of faith, forgiveness, and love.
+            </p>
+            <div class="quote-box">
+                "And the two will become one flesh. So they are no longer two, but one flesh."
+                <br><strong>- Mark 10:8</strong>
+            </div>
+            <button class="btn-elegant" onclick="startRestoration()">Begin Restoration Journey</button>
+        </div>
+    </div>
+
+    <!-- Dashboard Screen -->
+    <div id="dashboardScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Your Restoration Dashboard</h1>
+            <p id="dashboardDate"></p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="overallProgress">
+                <span id="progressText">Beginning Journey...</span>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-tile" onclick="showScreen('assessmentScreen')">
+                <div class="icon">📊</div>
+                <h3>Health Assessment</h3>
+                <p>Evaluate your marriage</p>
+            </div>
+            <div class="feature-tile" onclick="showScreen('devotionalScreen')">
+                <div class="icon">📖</div>
+                <h3>Couples Devotional</h3>
+                <p>Daily spiritual growth</p>
+            </div>
+            <div class="feature-tile" onclick="showScreen('forgivenessScreen')">
+                <div class="icon">🕊️</div>
+                <h3>Forgiveness Work</h3>
+                <p>Healing exercises</p>
+            </div>
+            <div class="feature-tile" onclick="showScreen('conflictScreen')">
+                <div class="icon">🗣️</div>
+                <h3>Conflict Tools</h3>
+                <p>Resolution templates</p>
+            </div>
+            <div class="feature-tile" onclick="showScreen('intimacyScreen')">
+                <div class="icon">💝</div>
+                <h3>Rebuild Intimacy</h3>
+                <p>Connection guides</p>
+            </div>
+            <div class="feature-tile" onclick="showScreen('progressScreen')">
+                <div class="icon">📈</div>
+                <h3>Track Progress</h3>
+                <p>Measure growth</p>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 15px;">Today's Focus</h2>
+            <p style="line-height: 1.8; color: var(--text);" id="dailyFocus"></p>
+            <div class="tip-card" style="margin-top: 20px;">
+                <strong>Remember:</strong> Restoration is a process, not an event. Each small step matters.
+            </div>
+        </div>
+    </div>
+
+    <!-- Assessment Screen -->
+    <div id="assessmentScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Marriage Health Assessment</h1>
+            <p>Honestly evaluate your relationship</p>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Complete Assessment</h2>
+            <p style="color: var(--text); margin-bottom: 25px;">
+                Rate each area of your marriage on a scale of 1 (needs significant work) to 5 (thriving).
+                Be honest - this is for your growth.
+            </p>
+
+            <div id="assessmentQuestions"></div>
+
+            <button class="btn-elegant" onclick="calculateAssessment()" style="width: 100%; margin-top: 20px;">
+                Calculate Marriage Health Score
+            </button>
+
+            <div id="assessmentResults" style="display: none;">
+                <div class="trust-meter">
+                    <svg width="200" height="200">
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="#BDC3C7" stroke-width="15"/>
+                        <circle id="trustCircle" cx="100" cy="100" r="90" fill="none" stroke="url(#trustGradient)" 
+                                stroke-width="15" stroke-dasharray="565" stroke-dashoffset="565"/>
+                        <defs>
+                            <linearGradient id="trustGradient">
+                                <stop offset="0%" stop-color="#D4AF37"/>
+                                <stop offset="100%" stop-color="#1E3A5F"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="trust-meter-text">
+                        <div class="trust-meter-score" id="healthScore">0</div>
+                        <div class="trust-meter-label">Health Score</div>
+                    </div>
+                </div>
+                <div id="assessmentFeedback"></div>
+            </div>
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Devotional Screen -->
+    <div id="devotionalScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Couples Devotional Journey</h1>
+            <p>Growing together in faith</p>
+        </div>
+
+        <div class="devotional-card">
+            <div style="background: var(--gold); color: white; padding: 8px 20px; border-radius: 20px; display: inline-block; margin-bottom: 20px;">
+                <span id="devotionalDay">Day 1</span>
+            </div>
+            <div id="devotionalContent"></div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin: 20px 0;">
+            <button class="btn-outline" onclick="previousDevotional()">← Previous</button>
+            <button class="btn-elegant" onclick="markDevotionalComplete()">Complete & Reflect</button>
+            <button class="btn-outline" onclick="nextDevotional()">Next →</button>
+        </div>
+
+        <div class="premium-card">
+            <h3 style="color: var(--deep-blue); margin-bottom: 15px;">Couple's Reflection</h3>
+            <p style="color: var(--text); margin-bottom: 15px;">
+                Discuss these questions together after reading today's devotional:
+            </p>
+            <div id="reflectionQuestions"></div>
+            <textarea class="journal-area" id="coupleReflection" placeholder="Write your reflections as a couple..."></textarea>
+            <button class="btn-elegant" onclick="saveReflection()" style="width: 100%; margin-top: 15px;">Save Reflection</button>
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Forgiveness Screen -->
+    <div id="forgivenessScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Forgiveness & Healing</h1>
+            <p>Release the past, embrace the future</p>
+        </div>
+
+        <div class="quote-box">
+            "Bear with each other and forgive one another if any of you has a grievance against someone. 
+            Forgive as the Lord forgave you."
+            <br><strong>- Colossians 3:13</strong>
+        </div>
+
+        <div class="forgiveness-exercise">
+            <h2 style="color: var(--rose); margin-bottom: 20px;">Exercise 1: Acknowledge the Hurt</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                Healing begins with honest acknowledgment. Without blame or attack, share what has hurt you.
+                Use "I feel" statements rather than "You did" accusations.
+            </p>
+            <textarea class="journal-area" placeholder="I feel hurt when... I feel disappointed about... I feel sad that..."></textarea>
+            <button class="btn-elegant" onclick="saveForgiveness('hurt')" style="width: 100%; margin-top: 15px;">Save & Continue</button>
+        </div>
+
+        <div class="forgiveness-exercise">
+            <h2 style="color: var(--rose); margin-bottom: 20px;">Exercise 2: Take Responsibility</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                What is your contribution to the problems? Even if it's 10%, own it fully.
+                This isn't about blame equality - it's about personal responsibility.
+            </p>
+            <textarea class="journal-area" placeholder="I take responsibility for... I acknowledge that I... I'm sorry for..."></textarea>
+            <button class="btn-elegant" onclick="saveForgiveness('responsibility')" style="width: 100%; margin-top: 15px;">Save & Continue</button>
+        </div>
+
+        <div class="forgiveness-exercise">
+            <h2 style="color: var(--rose); margin-bottom: 20px;">Exercise 3: Choose to Forgive</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                Forgiveness is a choice, not a feeling. It's deciding to release the debt, 
+                to stop punishing, to move forward. Write your declaration of forgiveness.
+            </p>
+            <textarea class="journal-area" placeholder="I choose to forgive you for... I release my right to... I let go of..."></textarea>
+            <button class="btn-elegant" onclick="saveForgiveness('forgive')" style="width: 100%; margin-top: 15px;">Save & Continue</button>
+        </div>
+
+        <div class="forgiveness-exercise">
+            <h2 style="color: var(--rose); margin-bottom: 20px;">Exercise 4: Rebuild Together</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                What boundaries, agreements, or changes will help rebuild trust?
+                Be specific and actionable. Focus on the future, not the past.
+            </p>
+            <textarea class="journal-area" placeholder="Going forward, we agree to... We will rebuild by... Our new boundaries are..."></textarea>
+            <button class="btn-elegant" onclick="saveForgiveness('rebuild')" style="width: 100%; margin-top: 15px;">Save Commitment</button>
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Conflict Resolution Screen -->
+    <div id="conflictScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Healthy Conflict Resolution</h1>
+            <p>Tools for productive disagreements</p>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">The PEACE Method</h2>
+            <p style="line-height: 1.8; color: var(--text);">
+                Use this template when conflicts arise to ensure both partners are heard and solutions are found.
+            </p>
+        </div>
+
+        <div class="conflict-template">
+            <h3 style="color: var(--sage); margin-bottom: 15px;">P - Pause & Pray</h3>
+            <p style="line-height: 1.8;">
+                Before discussing, take 5 minutes apart to calm down and pray.
+                Ask God for wisdom, patience, and love for your spouse.
+            </p>
+            <div class="tip-card" style="margin-top: 15px;">
+                <strong>Try this prayer:</strong> "Lord, help me see my spouse through Your eyes. 
+                Give us wisdom to solve this together."
+            </div>
+        </div>
+
+        <div class="conflict-template">
+            <h3 style="color: var(--sage); margin-bottom: 15px;">E - Express Feelings</h3>
+            <p style="line-height: 1.8; margin-bottom: 15px;">
+                Each person gets 5 minutes to share feelings without interruption.
+                Use "I feel" statements, not accusations.
+            </p>
+            <div style="background: white; padding: 15px; border-radius: 8px;">
+                <strong>Partner 1:</strong>
+                <textarea class="journal-area" style="min-height: 100px; margin-top: 10px;" placeholder="I feel..."></textarea>
+                <strong style="display: block; margin-top: 20px;">Partner 2:</strong>
+                <textarea class="journal-area" style="min-height: 100px; margin-top: 10px;" placeholder="I feel..."></textarea>
+            </div>
+        </div>
+
+        <div class="conflict-template">
+            <h3 style="color: var(--sage); margin-bottom: 15px;">A - Acknowledge & Validate</h3>
+            <p style="line-height: 1.8;">
+                Repeat back what you heard your partner say. Validate their feelings even if you disagree.
+                "What I hear you saying is... That must feel..."
+            </p>
+        </div>
+
+        <div class="conflict-template">
+            <h3 style="color: var(--sage); margin-bottom: 15px;">C - Create Solutions Together</h3>
+            <p style="line-height: 1.8; margin-bottom: 15px;">
+                Brainstorm solutions that work for both. Focus on "we" not "you vs me."
+            </p>
+            <textarea class="journal-area" placeholder="Possible solutions we could try..."></textarea>
+        </div>
+
+        <div class="conflict-template">
+            <h3 style="color: var(--sage); margin-bottom: 15px;">E - Establish Agreement</h3>
+            <p style="line-height: 1.8; margin-bottom: 15px;">
+                Agree on specific actions and check-in times. End with affirmation and connection.
+            </p>
+            <textarea class="journal-area" placeholder="We agree to... We will check in about this on..."></textarea>
+            <button class="btn-elegant" onclick="saveConflictResolution()" style="width: 100%; margin-top: 15px;">Save Resolution</button>
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Intimacy Rebuilding Screen -->
+    <div id="intimacyScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Rebuilding Intimacy</h1>
+            <p>Reconnecting at every level</p>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">The 5 Levels of Intimacy</h2>
+            <p style="line-height: 1.8; color: var(--text);">
+                True intimacy involves connection at multiple levels. Work through each level together,
+                taking time to build a strong foundation at each stage.
+            </p>
+        </div>
+
+        <div class="intimacy-level" onclick="expandIntimacy(this)">
+            <h3 style="color: var(--rose);">Level 1: Emotional Intimacy 💕</h3>
+            <p style="margin-top: 10px;">Sharing feelings, fears, dreams, and vulnerabilities</p>
+            <div class="expanded-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rose);">
+                <h4>Building Emotional Intimacy:</h4>
+                <ul style="line-height: 2.2; margin: 15px 0;">
+                    <li>Daily emotion check-ins: "How are you really feeling today?"</li>
+                    <li>Share one fear and one hope each week</li>
+                    <li>Practice active listening without trying to fix</li>
+                    <li>Create a safe space for vulnerability</li>
+                    <li>Validate each other's emotions</li>
+                </ul>
+                <div class="tip-card">
+                    <strong>This Week's Challenge:</strong> Each evening, share your high and low point of the day.
+                    Listen without judgment or advice unless asked.
+                </div>
+            </div>
+        </div>
+
+        <div class="intimacy-level" onclick="expandIntimacy(this)">
+            <h3 style="color: var(--rose);">Level 2: Intellectual Intimacy 🧠</h3>
+            <p style="margin-top: 10px;">Sharing thoughts, ideas, and meaningful conversations</p>
+            <div class="expanded-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rose);">
+                <h4>Building Intellectual Intimacy:</h4>
+                <ul style="line-height: 2.2; margin: 15px 0;">
+                    <li>Read a book together and discuss chapters</li>
+                    <li>Share articles that interest you</li>
+                    <li>Debate ideas respectfully</li>
+                    <li>Learn something new together</li>
+                    <li>Ask deep, thoughtful questions</li>
+                </ul>
+                <div class="tip-card">
+                    <strong>Conversation Starters:</strong> "What's something you've been thinking about lately?"
+                    "What would you like to learn more about?"
+                </div>
+            </div>
+        </div>
+
+        <div class="intimacy-level" onclick="expandIntimacy(this)">
+            <h3 style="color: var(--rose);">Level 3: Spiritual Intimacy 🙏</h3>
+            <p style="margin-top: 10px;">Connecting through faith, values, and purpose</p>
+            <div class="expanded-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rose);">
+                <h4>Building Spiritual Intimacy:</h4>
+                <ul style="line-height: 2.2; margin: 15px 0;">
+                    <li>Pray together daily, even if brief</li>
+                    <li>Share what God is teaching you</li>
+                    <li>Worship together regularly</li>
+                    <li>Serve others as a couple</li>
+                    <li>Discuss your spiritual journeys</li>
+                </ul>
+                <div class="scripture-verse">
+                    "For where two or three gather in my name, there am I with them." - Matthew 18:20
+                </div>
+            </div>
+        </div>
+
+        <div class="intimacy-level" onclick="expandIntimacy(this)">
+            <h3 style="color: var(--rose);">Level 4: Recreational Intimacy 🎨</h3>
+            <p style="margin-top: 10px;">Having fun and creating joyful memories together</p>
+            <div class="expanded-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rose);">
+                <h4>Building Recreational Intimacy:</h4>
+                <ul style="line-height: 2.2; margin: 15px 0;">
+                    <li>Schedule regular date nights</li>
+                    <li>Try new activities together</li>
+                    <li>Be playful and laugh together</li>
+                    <li>Create new traditions</li>
+                    <li>Take mini-adventures</li>
+                </ul>
+                <div class="tip-card">
+                    <strong>Fun Ideas:</strong> Cook a new recipe, take a dance class, go on a photo walk,
+                    play board games, have a picnic.
+                </div>
+            </div>
+        </div>
+
+        <div class="intimacy-level" onclick="expandIntimacy(this)">
+            <h3 style="color: var(--rose);">Level 5: Physical Intimacy 🤗</h3>
+            <p style="margin-top: 10px;">Non-sexual and sexual touch that builds connection</p>
+            <div class="expanded-content" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rose);">
+                <h4>Building Physical Intimacy:</h4>
+                <ul style="line-height: 2.2; margin: 15px 0;">
+                    <li>Hold hands daily</li>
+                    <li>Hug for at least 20 seconds</li>
+                    <li>Sit close while watching TV</li>
+                    <li>Give shoulder rubs or back scratches</li>
+                    <li>Kiss hello and goodbye</li>
+                    <li>Communicate desires and boundaries openly</li>
+                </ul>
+                <div class="tip-card">
+                    <strong>Remember:</strong> Physical intimacy starts with emotional safety.
+                    Build trust and connection at all levels.
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Progress Screen -->
+    <div id="progressScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Your Restoration Progress</h1>
+            <p>Celebrating growth and healing</p>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="daysActive">0</div>
+                <div class="stat-label">Days Active</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="devotionsComplete">0</div>
+                <div class="stat-label">Devotions Done</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="exercisesComplete">0</div>
+                <div class="stat-label">Exercises Done</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="conflictsResolved">0</div>
+                <div class="stat-label">Conflicts Resolved</div>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Marriage Health Trend</h2>
+            <div class="trust-meter">
+                <svg width="200" height="200">
+                    <circle cx="100" cy="100" r="90" fill="none" stroke="#BDC3C7" stroke-width="15"/>
+                    <circle id="progressCircle" cx="100" cy="100" r="90" fill="none" stroke="url(#progressGradient)" 
+                            stroke-width="15" stroke-dasharray="565" stroke-dashoffset="400"/>
+                    <defs>
+                        <linearGradient id="progressGradient">
+                            <stop offset="0%" stop-color="#7A9A82"/>
+                            <stop offset="100%" stop-color="#D4AF37"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="trust-meter-text">
+                    <div class="trust-meter-score" id="currentScore">65</div>
+                    <div class="trust-meter-label">Current Score</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Milestones Achieved</h2>
+            <div id="milestones"></div>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Areas of Growth</h2>
+            <div id="growthAreas"></div>
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Crisis Screen -->
+    <div id="crisisScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Crisis Support</h1>
+            <p>When things feel overwhelming</p>
+        </div>
+
+        <div class="premium-card" style="background: linear-gradient(135deg, #FEE2E2, #FFF0E6);">
+            <h2 style="color: #DC2626; margin-bottom: 15px;">⚠️ Immediate Help</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                If you're in a crisis situation involving safety, abuse, or immediate danger, 
+                please seek professional help immediately.
+            </p>
+            <p style="font-weight: bold; color: #DC2626;">
+                If you are in crisis, please contact your local helpline for immediate support.
+            </p>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">When to Seek Professional Help</h2>
+            <ul style="line-height: 2.2; color: var(--text);">
+                <li>Emotional, physical, or verbal abuse is present</li>
+                <li>Substance abuse is affecting the relationship</li>
+                <li>Mental health issues need professional treatment</li>
+                <li>Infidelity has occurred and you need guidance</li>
+                <li>You're stuck in destructive patterns</li>
+                <li>Communication has completely broken down</li>
+                <li>You're considering separation or divorce</li>
+            </ul>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Emergency Communication Script</h2>
+            <div class="conflict-template">
+                <p style="line-height: 1.8;">
+                    "I love you and I'm committed to our marriage. Right now, I'm feeling overwhelmed 
+                    and need some space to process. Can we take a break and reconnect in [specific time]? 
+                    I want to discuss this when we're both calm."
+                </p>
+            </div>
+        </div>
+
+        <div class="scripture-verse">
+            "Cast all your anxiety on him because he cares for you." - 1 Peter 5:7
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Resources Screen -->
+    <div id="resourcesScreen" class="screen">
+        <div class="elegant-header">
+            <button class="audio-toggle" onclick="toggleAudio()">🔊</button>
+            <h1>Marriage Resources</h1>
+            <p>Tools for continued growth</p>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">The Marriage Restoration Process</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                Restoration typically follows these stages. You may move back and forth between them:
+            </p>
+            <ol style="line-height: 2.2; margin-left: 20px;">
+                <li><strong>Crisis/Awakening:</strong> Recognizing the problems</li>
+                <li><strong>Decision:</strong> Choosing to fight for the marriage</li>
+                <li><strong>Assessment:</strong> Understanding what needs healing</li>
+                <li><strong>Forgiveness:</strong> Releasing past hurts</li>
+                <li><strong>Rebuilding:</strong> Creating new patterns</li>
+                <li><strong>Renewal:</strong> Experiencing a transformed relationship</li>
+            </ol>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Communication Guidelines</h2>
+            
+            <div class="tip-card">
+                <h3 style="color: var(--sage);">DO's:</h3>
+                <ul style="line-height: 2; margin-top: 10px;">
+                    <li>Use "I feel" statements</li>
+                    <li>Listen to understand, not to respond</li>
+                    <li>Take breaks when emotions run high</li>
+                    <li>Validate feelings even when you disagree</li>
+                    <li>Focus on solutions, not blame</li>
+                    <li>Express appreciation daily</li>
+                </ul>
+            </div>
+
+            <div class="tip-card" style="background: linear-gradient(135deg, var(--soft-rose), white);">
+                <h3 style="color: var(--rose);">DON'Ts:</h3>
+                <ul style="line-height: 2; margin-top: 10px;">
+                    <li>Use "always" or "never" statements</li>
+                    <li>Bring up past mistakes repeatedly</li>
+                    <li>Name-call or use contempt</li>
+                    <li>Give the silent treatment</li>
+                    <li>Make threats or ultimatums</li>
+                    <li>Discuss serious issues when tired or intoxicated</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Weekly Marriage Meeting</h2>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                Schedule a weekly 30-minute meeting to maintain connection:
+            </p>
+            <ol style="line-height: 2.2; margin-left: 20px;">
+                <li><strong>Appreciation (5 min):</strong> Share what you appreciated this week</li>
+                <li><strong>Issues (10 min):</strong> Discuss any concerns calmly</li>
+                <li><strong>Schedule (5 min):</strong> Coordinate calendars</li>
+                <li><strong>Fun (5 min):</strong> Plan something enjoyable together</li>
+                <li><strong>Dreams (5 min):</strong> Share hopes and goals</li>
+            </ol>
+        </div>
+
+        <div class="premium-card">
+            <h2 style="color: var(--deep-blue); margin-bottom: 20px;">Love Languages</h2>
+            <p style="line-height: 1.8;">
+                Understanding how your spouse gives and receives love is crucial:
+            </p>
+            <ul style="line-height: 2.2; margin: 20px 0;">
+                <li>💬 <strong>Words of Affirmation:</strong> Verbal compliments and encouragement</li>
+                <li>🎁 <strong>Gifts:</strong> Thoughtful presents and gestures</li>
+                <li>⏰ <strong>Quality Time:</strong> Undivided attention and presence</li>
+                <li>🤲 <strong>Acts of Service:</strong> Helping and doing tasks</li>
+                <li>🤗 <strong>Physical Touch:</strong> Affection and closeness</li>
+            </ul>
+        </div>
+
+        <button class="btn-outline" onclick="showScreen('dashboardScreen')" style="width: 100%;">Back to Dashboard</button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item" onclick="showScreen('dashboardScreen')">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+        </div>
+        <div class="nav-item" onclick="showScreen('crisisScreen')">
+            <span class="icon">🆘</span>
+            <span class="label">Crisis</span>
+        </div>
+        <div class="nav-item" onclick="showScreen('resourcesScreen')">
+            <span class="icon">📚</span>
+            <span class="label">Resources</span>
+        </div>
+        <div class="nav-item" onclick="showInfoModal()">
+            <span class="icon">ℹ️</span>
+            <span class="label">Info</span>
+        </div>
+        <div class="nav-item" onclick="showAboutModal()">
+            <span class="icon">✨</span>
+            <span class="label">About</span>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('infoModal')">×</button>
+            <h2 style="color: var(--deep-blue); margin-bottom: 25px;">How to Use This App</h2>
+            
+            <h3 style="color: var(--gold); margin-top: 25px;">What This App Does</h3>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                The Marriage Restoration Blueprint provides comprehensive tools for couples working to heal and strengthen their relationship:
+            </p>
+            <ul style="line-height: 2.2; margin-bottom: 25px;">
+                <li>Marriage health assessment with personalized feedback</li>
+                <li>30-day couples devotional journey</li>
+                <li>Structured forgiveness exercises</li>
+                <li>Conflict resolution templates (PEACE method)</li>
+                <li>5 levels of intimacy rebuilding guides</li>
+                <li>Progress tracking and milestone celebration</li>
+                <li>Crisis support and professional resources</li>
+            </ul>
+
+            <h3 style="color: var(--gold); margin-top: 25px;">How to Navigate</h3>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                1. Start with the Marriage Health Assessment<br>
+                2. Work through daily devotionals together<br>
+                3. Complete forgiveness exercises as needed<br>
+                4. Use conflict tools during disagreements<br>
+                5. Focus on one intimacy level at a time<br>
+                6. Track your progress weekly
+            </p>
+
+            <h3 style="color: var(--gold); margin-top: 25px;">Best Practices</h3>
+            <p style="line-height: 1.8; margin-bottom: 20px;">
+                • Set aside dedicated time to work through exercises together<br>
+                • Be honest and vulnerable in your responses<br>
+                • Celebrate small victories along the way<br>
+                • Seek professional help when needed<br>
+                • Remember: restoration is a journey, not a destination
+            </p>
+
+            <h3 style="color: var(--gold); margin-top: 25px;">Install on Your Phone</h3>
+            <p style="line-height: 1.8;">
+                <strong>iPhone:</strong> Tap Share → Add to Home Screen<br>
+                <strong>Android:</strong> Tap Menu (⋮) → Add to Home Screen
+            </p>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('aboutModal')">×</button>
+            <h2 style="color: var(--deep-blue); margin-bottom: 25px;">About Marriage Restoration Blueprint</h2>
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h3 style="color: var(--gold); margin-bottom: 15px;">Made with 💑 by Justin</h3>
+                <p style="color: var(--text); font-size: 18px;">Depths to Heights</p>
+            </div>
+
+            <div class="quote-box">
+                <strong>Our Mission:</strong><br>
+                To provide couples with biblical tools and practical exercises for restoring 
+                broken marriages, rebuilding trust, and creating lasting love that honors God.
+            </div>
+
+            <div style="margin: 30px 0;">
+                <p style="line-height: 1.8; color: var(--text);">
+                    At Depths to Heights, we believe every marriage can be restored when both partners 
+                    are willing to do the work. This app provides the blueprint, but your commitment 
+                    and God's grace make restoration possible.
+                </p>
+            </div>
+
+            <div class="scripture-verse">
+                "Therefore what God has joined together, let no one separate." - Mark 10:9
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://depthstoheights.org" target="_blank" class="btn-outline">
+                    Visit Our Website
+                </a>
+                <p style="margin: 20px 0; color: var(--text);">
+                    Contact: depthstoheights@gmail.com
+                </p>
+                <button class="btn-elegant" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=8GRE7B8C3TP2U', '_blank')">
+                    Support Our Ministry
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAA==" type="audio/wav">
+    </audio>
+
+    <script>
+        // App State
+        let appState = {
+            currentScreen: 'welcomeScreen',
+            currentDevotional: 1,
+            audioEnabled: false,
+            startDate: null,
+            assessmentScores: {},
+            devotionalsCompleted: [],
+            forgivenessExercises: {},
+            conflictResolutions: [],
+            reflections: [],
+            currentAssessmentAnswers: {}
+        };
+
+        // Assessment Questions
+        const assessmentQuestions = [
+            { id: 'communication', question: 'How well do you communicate openly and honestly?' },
+            { id: 'trust', question: 'What is the level of trust in your relationship?' },
+            { id: 'intimacy', question: 'How satisfied are you with your emotional and physical intimacy?' },
+            { id: 'conflict', question: 'How well do you resolve conflicts together?' },
+            { id: 'shared-goals', question: 'How aligned are your life goals and values?' },
+            { id: 'respect', question: 'How much mutual respect exists in your marriage?' },
+            { id: 'friendship', question: 'How strong is your friendship with each other?' },
+            { id: 'support', question: 'How well do you support each other through challenges?' },
+            { id: 'forgiveness', question: 'How readily do you forgive each other?' },
+            { id: 'spiritual', question: 'How connected are you spiritually as a couple?' },
+            { id: 'fun', question: 'How much fun and laughter do you share?' },
+            { id: 'commitment', question: 'How committed are you both to the marriage?' }
+        ];
+
+        // Devotionals (30 days)
+        const devotionals = [
+            {
+                day: 1,
+                title: "Foundation of Love",
+                scripture: "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. - 1 Corinthians 13:4",
+                content: "Today we begin rebuilding on the foundation of God's definition of love. This love isn't based on feelings but on choice and commitment. Reflect on how you can show patient, kind love to your spouse today, especially in areas where you've struggled.",
+                prayer: "Lord, teach us to love as You love. Help us choose patience when we want to react, kindness when we feel hurt. Rebuild our love on Your foundation.",
+                questions: [
+                    "What does patient love look like in our daily life?",
+                    "Where have we failed to show kindness to each other?",
+                    "How can we practice 1 Corinthians 13 love today?"
+                ]
+            },
+            {
+                day: 2,
+                title: "The Power of Unity",
+                scripture: "Two are better than one, because they have a good return for their labor. - Ecclesiastes 4:9",
+                content: "God designed marriage as a partnership. When you work together, you're stronger than when you work against each other. Today, identify areas where you've been operating independently instead of as a team. Choose to unite in purpose and action.",
+                prayer: "Father, help us remember we're on the same team. Show us how to support rather than compete, to build up rather than tear down.",
+                questions: [
+                    "Where have we been working against instead of with each other?",
+                    "What goals can we pursue together?",
+                    "How can we better support each other's dreams?"
+                ]
+            },
+            {
+                day: 3,
+                title: "Forgiveness Frees",
+                scripture: "Bear with each other and forgive one another if any of you has a grievance against someone. Forgive as the Lord forgave you. - Colossians 3:13",
+                content: "Unforgiveness is a prison that locks both people inside. Today, choose to forgive - not because your spouse deserves it, but because Christ forgave you. Release the debt. Stop keeping score. Let grace flow freely in your marriage.",
+                prayer: "Jesus, You forgave us completely. Give us the strength to forgive each other, to release past hurts, and to move forward in freedom.",
+                questions: [
+                    "What unforgiveness am I still holding onto?",
+                    "How has unforgiveness affected our relationship?",
+                    "What would change if we truly forgave?"
+                ]
+            },
+            {
+                day: 4,
+                title: "Speaking Life",
+                scripture: "The tongue has the power of life and death, and those who love it will eat its fruit. - Proverbs 18:21",
+                content: "Your words can build up or tear down your marriage. Today, commit to speaking life over your spouse. Replace criticism with encouragement, sarcasm with sincerity, complaints with gratitude. Watch how your words transform the atmosphere of your home.",
+                prayer: "Lord, set a guard over our mouths. Help us speak words that heal, encourage, and build up our marriage.",
+                questions: [
+                    "What negative speech patterns have we developed?",
+                    "How can we encourage each other more?",
+                    "What words does my spouse need to hear from me?"
+                ]
+            },
+            {
+                day: 5,
+                title: "Trust Rebuilt",
+                scripture: "Trust in the Lord with all your heart and lean not on your own understanding. - Proverbs 3:5",
+                content: "Broken trust is one of the deepest wounds in marriage. Rebuilding requires consistency, transparency, and time. Today, take one step toward rebuilding trust - whether that's being more open, keeping a promise, or showing reliability in small things.",
+                prayer: "God, You are trustworthy. Help us reflect Your faithfulness to each other. Give us patience as trust is rebuilt brick by brick.",
+                questions: [
+                    "Where has trust been broken in our marriage?",
+                    "What actions can rebuild trust?",
+                    "How can we create accountability?"
+                ]
+            },
+            {
+                day: 6,
+                title: "Servant Hearts",
+                scripture: "Submit to one another out of reverence for Christ. - Ephesians 5:21",
+                content: "Marriage thrives when both partners serve each other. This isn't about keeping score but about outdoing one another in love and service. Today, look for ways to serve your spouse without expecting anything in return.",
+                prayer: "Jesus, You came to serve. Give us servant hearts toward each other, finding joy in meeting each other's needs.",
+                questions: [
+                    "How can I better serve my spouse?",
+                    "What needs have I been ignoring?",
+                    "How does serving change our dynamic?"
+                ]
+            },
+            {
+                day: 7,
+                title: "Celebrating Progress",
+                scripture: "Give thanks in all circumstances; for this is God's will for you in Christ Jesus. - 1 Thessalonians 5:18",
+                content: "One week of restoration work deserves celebration! Today, acknowledge the progress you've made, no matter how small. Gratitude changes perspective. Thank God for your spouse and for the opportunity to rebuild.",
+                prayer: "Thank You, Lord, for this week of growth. Thank You for not giving up on our marriage. Help us see the progress, not just the problems.",
+                questions: [
+                    "What progress have we made this week?",
+                    "What are we grateful for in each other?",
+                    "How can we celebrate small victories?"
+                ]
+            },
+            {
+                day: 8,
+                title: "Patience in the Process",
+                scripture: "Be completely humble and gentle; be patient, bearing with one another in love. - Ephesians 4:2",
+                content: "Restoration doesn't happen overnight. It requires patience with the process and with each other. Today, give your spouse grace for not being perfect. Give yourself grace too. Remember, you're both works in progress.",
+                prayer: "Lord, grant us patience with each other and with the restoration process. Help us see progress, not perfection.",
+                questions: [
+                    "Where do I need more patience with my spouse?",
+                    "How can we encourage each other during setbacks?",
+                    "What expectations need adjusting?"
+                ]
+            },
+            {
+                day: 9,
+                title: "Emotional Safety",
+                scripture: "Above all, love each other deeply, because love covers over a multitude of sins. - 1 Peter 4:8",
+                content: "Your marriage should be the safest place on earth for both of you. Today, work on creating emotional safety - where feelings can be expressed without fear of judgment, where vulnerability is met with compassion.",
+                prayer: "Father, help us create a safe haven in our marriage where we can be real, raw, and still loved.",
+                questions: [
+                    "Do we feel emotionally safe with each other?",
+                    "What makes our spouse feel unsafe?",
+                    "How can we increase emotional security?"
+                ]
+            },
+            {
+                day: 10,
+                title: "Choosing Love",
+                scripture: "This is my command: Love each other. - John 15:17",
+                content: "Love is a choice you make daily, hourly, moment by moment. It's choosing to see the best, believe the best, and bring out the best in your spouse. Today, make conscious choices to love, especially when you don't feel like it.",
+                prayer: "Lord, help us choose love when we feel hurt, disappointed, or angry. Remind us that love is a decision, not just a feeling.",
+                questions: [
+                    "When is it hardest to choose love?",
+                    "What would change if we consistently chose love?",
+                    "How can we remind each other to choose love?"
+                ]
+            },
+            {
+                day: 11,
+                title: "Breaking Negative Cycles",
+                scripture: "Do not conform to the pattern of this world, but be transformed by the renewing of your mind. - Romans 12:2",
+                content: "Every marriage has negative patterns that need breaking. Today, identify one destructive cycle you keep repeating. Choose to respond differently. Break the pattern with a new, healthier response.",
+                prayer: "God, reveal our destructive patterns and give us wisdom to break them. Transform our habits and responses.",
+                questions: [
+                    "What negative cycles do we keep repeating?",
+                    "What triggers these patterns?",
+                    "How can we interrupt and redirect them?"
+                ]
+            },
+            {
+                day: 12,
+                title: "The Gift of Time",
+                scripture: "There is a time for everything, and a season for every activity under the heavens. - Ecclesiastes 3:1",
+                content: "Time is one of your most valuable gifts to give your spouse. Today, give the gift of undivided attention. Put away distractions. Be fully present. Quality time says 'you matter more than anything else.'",
+                prayer: "Lord, help us prioritize time together. Show us how to be fully present with each other.",
+                questions: [
+                    "How can we create more quality time?",
+                    "What distractions steal our attention?",
+                    "What activities help us connect?"
+                ]
+            },
+            {
+                day: 13,
+                title: "Honoring Differences",
+                scripture: "How good and pleasant it is when God's people live together in unity! - Psalm 133:1",
+                content: "Your differences aren't defects - they're by design. God brought you together to complement, not compete. Today, celebrate what makes your spouse unique. See differences as strengths that balance your weaknesses.",
+                prayer: "Father, help us appreciate our differences as gifts. Show us how our unique qualities make us stronger together.",
+                questions: [
+                    "What differences cause the most friction?",
+                    "How do our differences actually help us?",
+                    "How can we honor rather than criticize differences?"
+                ]
+            },
+            {
+                day: 14,
+                title: "Halfway Milestone",
+                scripture: "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up. - Galatians 6:9",
+                content: "You're halfway through this journey! Don't give up now. The middle is often the hardest - initial enthusiasm has worn off but the finish line seems far. Keep going. Your marriage is worth the effort.",
+                prayer: "Lord, renew our strength for the second half of this journey. Remind us why we're fighting for our marriage.",
+                questions: [
+                    "What has been our biggest breakthrough so far?",
+                    "What are we most hopeful about?",
+                    "How can we maintain momentum?"
+                ]
+            },
+            {
+                day: 15,
+                title: "Physical Connection",
+                scripture: "The husband should fulfill his marital duty to his wife, and likewise the wife to her husband. - 1 Corinthians 7:3",
+                content: "Physical intimacy is a vital part of marriage - not just sex, but all forms of affectionate touch. Today, reconnect physically in appropriate ways for where you are. Hold hands, hug longer, sit closer. Let touch communicate love.",
+                prayer: "Lord, help us reconnect physically in ways that honor You and each other. Restore healthy, loving touch to our marriage.",
+                questions: [
+                    "How has physical distance affected us emotionally?",
+                    "What kind of touch does my spouse need?",
+                    "How can we rebuild physical intimacy gradually?"
+                ]
+            },
+            {
+                day: 16,
+                title: "Financial Unity",
+                scripture: "For where your treasure is, there your heart will be also. - Matthew 6:21",
+                content: "Money issues can divide or unite. Today, commit to financial transparency and teamwork. You're not financial opponents but partners working toward shared goals. Align your spending with your values.",
+                prayer: "God, help us be unified in our finances. Give us wisdom to steward resources together for Your glory.",
+                questions: [
+                    "Where do we disagree about money?",
+                    "What financial goals can we share?",
+                    "How can we increase financial transparency?"
+                ]
+            },
+            {
+                day: 17,
+                title: "Creating New Memories",
+                scripture: "Forget the former things; do not dwell on the past. See, I am doing a new thing! - Isaiah 43:18-19",
+                content: "While you can't erase painful memories, you can create new, positive ones. Today, do something fun together. Laugh together. Make a new memory that reminds you both why you fell in love.",
+                prayer: "Lord, help us create new, joyful memories. Let laughter and fun return to our marriage.",
+                questions: [
+                    "What fun things did we used to do?",
+                    "What new experience could we try?",
+                    "How can we prioritize fun in our relationship?"
+                ]
+            },
+            {
+                day: 18,
+                title: "Spiritual Leadership",
+                scripture: "As for me and my household, we will serve the Lord. - Joshua 24:15",
+                content: "A marriage centered on God has an unshakeable foundation. Today, commit to growing spiritually together. Pray together, even if briefly. Share what God is teaching you. Let faith be the cornerstone of your restoration.",
+                prayer: "Lord, be the center of our marriage. Draw us closer to You and to each other through shared faith.",
+                questions: [
+                    "How can we grow spiritually together?",
+                    "What role does faith play in our marriage?",
+                    "How can we support each other's spiritual journey?"
+                ]
+            },
+            {
+                day: 19,
+                title: "Boundaries and Freedom",
+                scripture: "It is for freedom that Christ has set us free. - Galatians 5:1",
+                content: "Healthy boundaries create freedom, not restriction. They protect your marriage from outside threats and internal dysfunction. Today, discuss what boundaries you need to establish or reinforce for your marriage to thrive.",
+                prayer: "Lord, give us wisdom to set healthy boundaries that protect our marriage while allowing love to flourish.",
+                questions: [
+                    "What boundaries do we need to establish?",
+                    "Where have poor boundaries hurt us?",
+                    "How can boundaries increase our freedom?"
+                ]
+            },
+            {
+                day: 20,
+                title: "Dream Together",
+                scripture: "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you. - Jeremiah 29:11",
+                content: "Shared dreams unite couples. Today, dream together about your future. What adventures await? What goals excite you both? Let hope for tomorrow strengthen your commitment to restoration today.",
+                prayer: "God, restore our ability to dream together. Show us the beautiful future You have planned for our marriage.",
+                questions: [
+                    "What dreams have we let die?",
+                    "What future excites us both?",
+                    "How can we support each other's dreams?"
+                ]
+            },
+            {
+                day: 21,
+                title: "Respect and Honor",
+                scripture: "Show proper respect to everyone, love the family of believers. - 1 Peter 2:17",
+                content: "Respect is love in action. It's choosing to honor your spouse even when you disagree. Today, show respect through your words, tone, and actions. Treat your spouse as valuable, because they are.",
+                prayer: "Lord, help us show genuine respect for each other, honoring the image of God in our spouse.",
+                questions: [
+                    "Where have we shown disrespect?",
+                    "What makes my spouse feel respected?",
+                    "How can we disagree respectfully?"
+                ]
+            },
+            {
+                day: 22,
+                title: "Healing Words",
+                scripture: "Gracious words are a honeycomb, sweet to the soul and healing to the bones. - Proverbs 16:24",
+                content: "After hurt, healing words are medicine for the soul. Today, speak healing over your marriage. Apologize specifically. Affirm genuinely. Encourage abundantly. Let your words bring life and healing.",
+                prayer: "Father, fill our mouths with words that heal. Help us speak life, hope, and encouragement to each other.",
+                questions: [
+                    "What words does my spouse need to hear?",
+                    "What apologies are still needed?",
+                    "How can our words bring healing?"
+                ]
+            },
+            {
+                day: 23,
+                title: "Protecting Your Marriage",
+                scripture: "Above all else, guard your heart, for everything you do flows from it. - Proverbs 4:23",
+                content: "Your marriage needs protection from external threats and internal complacency. Today, identify what threatens your marriage and create a plan to protect it. Guard your relationship like the treasure it is.",
+                prayer: "Lord, help us vigilantly protect our marriage from anything that would harm it. Give us wisdom to guard our love.",
+                questions: [
+                    "What threatens our marriage?",
+                    "How can we protect against these threats?",
+                    "What accountability do we need?"
+                ]
+            },
+            {
+                day: 24,
+                title: "Gratitude Changes Everything",
+                scripture: "Give thanks in all circumstances; for this is God's will for you in Christ Jesus. - 1 Thessalonians 5:18",
+                content: "Gratitude shifts focus from what's wrong to what's right. Today, list 10 things you're grateful for about your spouse. Share them. Watch how gratitude changes the atmosphere and softens hearts.",
+                prayer: "Thank You, God, for my spouse. Help me see the good, appreciate the efforts, and express gratitude daily.",
+                questions: [
+                    "What am I most grateful for in my spouse?",
+                    "How can we cultivate daily gratitude?",
+                    "What happens when we focus on the positive?"
+                ]
+            },
+            {
+                day: 25,
+                title: "Commitment Renewed",
+                scripture: "Therefore what God has joined together, let no one separate. - Mark 10:9",
+                content: "Commitment is the glue that holds marriage together through storms. Today, renew your commitment to each other and to the restoration process. Choose to stay, to work, to love, no matter what.",
+                prayer: "Lord, strengthen our commitment to each other and to You. Help us choose our marriage every single day.",
+                questions: [
+                    "What does commitment mean to us now?",
+                    "How can we strengthen our commitment?",
+                    "What vows do we want to renew?"
+                ]
+            },
+            {
+                day: 26,
+                title: "Grace Upon Grace",
+                scripture: "From his fullness we have all received, grace upon grace. - John 1:16",
+                content: "Grace is giving your spouse what they need, not what they deserve. It's the oil that keeps marriage functioning smoothly. Today, extend extraordinary grace. Cover failures with love. Respond to mistakes with mercy.",
+                prayer: "Jesus, You've shown us endless grace. Help us extend that same grace to each other, especially when it's hardest.",
+                questions: [
+                    "Where do we need more grace?",
+                    "How has grace changed our marriage?",
+                    "How can we make grace our default response?"
+                ]
+            },
+            {
+                day: 27,
+                title: "Building Legacy",
+                scripture: "A good name is more desirable than great riches; to be esteemed is better than silver or gold. - Proverbs 22:1",
+                content: "Your marriage is building a legacy. What story will it tell? Today, think beyond yourselves. How is your restoration impacting others? What legacy of love, forgiveness, and perseverance are you creating?",
+                prayer: "God, use our story for Your glory. Let our restoration inspire others to fight for their marriages.",
+                questions: [
+                    "What legacy do we want to leave?",
+                    "How can our story help others?",
+                    "What would we want our children to learn?"
+                ]
+            },
+            {
+                day: 28,
+                title: "Joy Returns",
+                scripture: "Weeping may stay for the night, but rejoicing comes in the morning. - Psalm 30:5",
+                content: "Joy can return to your marriage. It may look different than before - deeper, more mature, hard-won - but joy can bloom again. Today, look for glimpses of joy. Celebrate them. Joy is a choice and a gift.",
+                prayer: "Lord, restore joy to our marriage. Help us choose joy even in difficulty, knowing You are working all things for good.",
+                questions: [
+                    "Where do we see joy returning?",
+                    "What brings us joy together?",
+                    "How can we cultivate more joy?"
+                ]
+            },
+            {
+                day: 29,
+                title: "Future Hope",
+                scripture: "For I am confident of this, that he who began a good work in you will carry it on to completion. - Philippians 1:6",
+                content: "God isn't finished with your marriage. He who began this restoration will complete it. Today, hold onto hope. Your best days can be ahead, not behind. Trust the Author to write a beautiful next chapter.",
+                prayer: "Father, thank You for not giving up on us. Complete the work You've started. Give us hope for our future together.",
+                questions: [
+                    "What hopes do we have for our future?",
+                    "How has hope grown during this journey?",
+                    "What are we most excited about?"
+                ]
+            },
+            {
+                day: 30,
+                title: "New Beginning",
+                scripture: "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here! - 2 Corinthians 5:17",
+                content: "Congratulations on completing 30 days of restoration work! This isn't the end but a new beginning. Your marriage is being made new. Continue the practices you've learned. Keep choosing love, extending grace, and trusting God. Your marriage can be better than ever before.",
+                prayer: "Lord, thank You for 30 days of healing and growth. This is just the beginning. Continue to restore, renew, and revive our marriage for Your glory.",
+                questions: [
+                    "How has our marriage changed in 30 days?",
+                    "What practices will we continue?",
+                    "How can we keep growing together?"
+                ]
+            }
+        ];
+
+        // Daily Focus Messages
+        const dailyFocusMessages = [
+            "Today, speak words of affirmation to your spouse. Notice something good and say it.",
+            "Practice active listening today. Put down your phone and give full attention.",
+            "Do one act of service for your spouse without being asked.",
+            "Share a genuine compliment about your spouse's character, not just appearance.",
+            "Pray together for at least 5 minutes, even if it feels awkward.",
+            "Plan something fun to do together this week.",
+            "Write a short note of appreciation and leave it where your spouse will find it.",
+            "Ask your spouse: 'What can I do to make your day better?'",
+            "Share one thing you're grateful for about your marriage.",
+            "Hold hands during a difficult conversation today."
+        ];
+
+        // Initialize App
+        function initApp() {
+            loadState();
+            updateDateTime();
+            setInterval(updateDateTime, 60000);
+            
+            // Set random daily focus
+            const randomFocus = dailyFocusMessages[Math.floor(Math.random() * dailyFocusMessages.length)];
+            const focusEl = document.getElementById('dailyFocus');
+            if (focusEl) {
+                focusEl.textContent = randomFocus;
+            }
+            
+            updateProgress();
+            loadAssessmentQuestions();
+        }
+
+        // Navigation
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById(screenId).classList.add('active');
+            appState.currentScreen = screenId;
+            
+            // Update nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Special screen updates
+            if (screenId === 'devotionalScreen') {
+                loadDevotional(appState.currentDevotional);
+            } else if (screenId === 'progressScreen') {
+                updateProgressStats();
+            }
+            
+            saveState();
+        }
+
+        function startRestoration() {
+            if (!appState.startDate) {
+                appState.startDate = new Date().toISOString();
+            }
+            showScreen('dashboardScreen');
+            saveState();
+        }
+
+        // Assessment
+        function loadAssessmentQuestions() {
+            const container = document.getElementById('assessmentQuestions');
+            if (!container) return;
+            
+            let html = '';
+            assessmentQuestions.forEach(q => {
+                html += `
+                    <div class="assessment-question">
+                        <p style="font-weight: 500; color: var(--deep-blue); margin-bottom: 10px;">${q.question}</p>
+                        <div class="assessment-options">
+                            ${[1,2,3,4,5].map(score => `
+                                <div class="assessment-option" onclick="selectAssessmentAnswer('${q.id}', ${score})"
+                                     data-question="${q.id}" data-score="${score}">
+                                    ${score}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function selectAssessmentAnswer(questionId, score) {
+            appState.currentAssessmentAnswers[questionId] = score;
+            
+            // Update UI
+            document.querySelectorAll(`[data-question="${questionId}"]`).forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelector(`[data-question="${questionId}"][data-score="${score}"]`).classList.add('selected');
+            
+            saveState();
+        }
+
+        function calculateAssessment() {
+            const answers = appState.currentAssessmentAnswers;
+            const totalQuestions = assessmentQuestions.length;
+            const answeredQuestions = Object.keys(answers).length;
+            
+            if (answeredQuestions < totalQuestions) {
+                const resultsDiv = document.getElementById('assessmentResults');
+                resultsDiv.style.display = 'block';
+                document.getElementById('assessmentFeedback').innerHTML = `
+                    <div class="tip-card" style="background: linear-gradient(135deg, #FEE2E2, #FFF0E6);">
+                        <strong>Please answer all questions</strong><br>
+                        You've answered ${answeredQuestions} of ${totalQuestions} questions.
+                    </div>
+                `;
+                return;
+            }
+            
+            // Calculate score
+            let totalScore = 0;
+            Object.values(answers).forEach(score => {
+                totalScore += score;
+            });
+            
+            const averageScore = Math.round((totalScore / totalQuestions) * 20);
+            appState.assessmentScores[new Date().toISOString()] = averageScore;
+            
+            // Show results
+            const resultsDiv = document.getElementById('assessmentResults');
+            resultsDiv.style.display = 'block';
+            
+            // Animate score
+            animateScore(averageScore);
+            
+            // Generate feedback
+            let feedback = '';
+            if (averageScore >= 80) {
+                feedback = `
+                    <h3 style="color: var(--sage);">Strong Foundation! (${averageScore}%)</h3>
+                    <p>Your marriage has a solid foundation. Continue nurturing what's working while addressing any remaining challenges.</p>
+                `;
+            } else if (averageScore >= 60) {
+                feedback = `
+                    <h3 style="color: var(--gold);">Good Progress (${averageScore}%)</h3>
+                    <p>Your marriage has strengths to build on. Focus on the areas scoring lowest while maintaining what's working well.</p>
+                `;
+            } else if (averageScore >= 40) {
+                feedback = `
+                    <h3 style="color: var(--rose);">Significant Work Needed (${averageScore}%)</h3>
+                    <p>Your marriage needs attention in multiple areas. Take it one step at a time, celebrating small victories along the way.</p>
+                `;
+            } else {
+                feedback = `
+                    <h3 style="color: var(--deep-blue);">Crisis Point (${averageScore}%)</h3>
+                    <p>Your marriage is in crisis, but there's hope. Consider professional counseling alongside this app. Every journey starts with a single step.</p>
+                `;
+            }
+            
+            document.getElementById('assessmentFeedback').innerHTML = `
+                <div class="tip-card">
+                    ${feedback}
+                    <div style="margin-top: 20px;">
+                        <strong>Lowest Scoring Areas:</strong><br>
+                        ${getLowestScores()}
+                    </div>
+                </div>
+            `;
+            
+            saveState();
+        }
+
+        function animateScore(targetScore) {
+            const circle = document.getElementById('trustCircle');
+            const scoreText = document.getElementById('healthScore');
+            const circumference = 565;
+            const offset = circumference - (targetScore / 100) * circumference;
+            
+            let currentScore = 0;
+            const increment = targetScore / 50;
+            
+            const animation = setInterval(() => {
+                currentScore += increment;
+                if (currentScore >= targetScore) {
+                    currentScore = targetScore;
+                    clearInterval(animation);
+                }
+                
+                scoreText.textContent = Math.round(currentScore);
+                circle.style.strokeDashoffset = circumference - (currentScore / 100) * circumference;
+            }, 20);
+        }
+
+        function getLowestScores() {
+            const answers = appState.currentAssessmentAnswers;
+            const scores = assessmentQuestions.map(q => ({
+                question: q.question,
+                score: answers[q.id] || 0
+            }));
+            
+            scores.sort((a, b) => a.score - b.score);
+            const lowest = scores.slice(0, 3);
+            
+            return lowest.map(item => `• ${item.question} (Score: ${item.score})`).join('<br>');
+        }
+
+        // Devotionals
+        function loadDevotional(day) {
+            const devotional = devotionals[day - 1];
+            if (!devotional) return;
+            
+            document.getElementById('devotionalDay').textContent = `Day ${devotional.day}`;
+            
+            const content = `
+                <h2 style="color: var(--deep-blue); margin-bottom: 20px;">${devotional.title}</h2>
+                <div class="scripture-verse">
+                    ${devotional.scripture}
+                </div>
+                <p style="line-height: 1.8; color: var(--text); margin: 20px 0;">
+                    ${devotional.content}
+                </p>
+                <div class="tip-card">
+                    <h4 style="color: var(--gold); margin-bottom: 10px;">Prayer Together:</h4>
+                    <p style="line-height: 1.6; font-style: italic;">${devotional.prayer}</p>
+                </div>
+            `;
+            
+            document.getElementById('devotionalContent').innerHTML = content;
+            
+            // Load reflection questions
+            const questionsHTML = devotional.questions.map((q, i) => 
+                `<p style="line-height: 1.8; margin: 10px 0;">
+                    <strong>${i + 1}.</strong> ${q}
+                </p>`
+            ).join('');
+            document.getElementById('reflectionQuestions').innerHTML = questionsHTML;
+        }
+
+        function markDevotionalComplete() {
+            if (!appState.devotionalsCompleted.includes(appState.currentDevotional)) {
+                appState.devotionalsCompleted.push(appState.currentDevotional);
+                saveState();
+                updateProgress();
+                
+                // Show success message
+                const content = document.getElementById('devotionalContent');
+                const successMsg = document.createElement('div');
+                successMsg.className = 'success-message';
+                successMsg.textContent = '✓ Devotional completed! Your commitment to growth is building a stronger marriage.';
+                content.appendChild(successMsg);
+                
+                setTimeout(() => {
+                    successMsg.remove();
+                }, 3000);
+            }
+        }
+
+        function nextDevotional() {
+            if (appState.currentDevotional < 30) {
+                appState.currentDevotional++;
+                loadDevotional(appState.currentDevotional);
+                saveState();
+            }
+        }
+
+        function previousDevotional() {
+            if (appState.currentDevotional > 1) {
+                appState.currentDevotional--;
+                loadDevotional(appState.currentDevotional);
+                saveState();
+            }
+        }
+
+        function saveReflection() {
+            const content = document.getElementById('coupleReflection').value;
+            if (!content.trim()) {
+                document.getElementById('coupleReflection').style.borderColor = '#DC2626';
+                return;
+            }
+            
+            appState.reflections.push({
+                date: new Date().toISOString(),
+                day: appState.currentDevotional,
+                content: content
+            });
+            saveState();
+            
+            // Show success
+            document.getElementById('coupleReflection').value = '';
+            const card = document.getElementById('coupleReflection').closest('.premium-card');
+            const successMsg = document.createElement('div');
+            successMsg.className = 'success-message';
+            successMsg.textContent = 'Reflection saved! Your insights are valuable milestones in your journey.';
+            card.appendChild(successMsg);
+            
+            setTimeout(() => {
+                successMsg.remove();
+            }, 3000);
+        }
+
+        // Forgiveness
+        function saveForgiveness(type) {
+            const textareas = event.target.parentElement.querySelectorAll('.journal-area');
+            const content = textareas[textareas.length - 1].value;
+            
+            if (!content.trim()) {
+                textareas[textareas.length - 1].style.borderColor = '#DC2626';
+                return;
+            }
+            
+            if (!appState.forgivenessExercises[type]) {
+                appState.forgivenessExercises[type] = [];
+            }
+            
+            appState.forgivenessExercises[type].push({
+                date: new Date().toISOString(),
+                content: content
+            });
+            saveState();
+            
+            // Show success
+            textareas[textareas.length - 1].value = '';
+            const exercise = event.target.closest('.forgiveness-exercise');
+            const successMsg = document.createElement('div');
+            successMsg.className = 'success-message';
+            successMsg.textContent = 'Exercise saved! Each step toward forgiveness is a step toward freedom.';
+            exercise.appendChild(successMsg);
+            
+            setTimeout(() => {
+                successMsg.remove();
+            }, 3000);
+        }
+
+        // Conflict Resolution
+        function saveConflictResolution() {
+            const textareas = document.querySelectorAll('#conflictScreen .journal-area');
+            const resolutions = [];
+            
+            textareas.forEach(textarea => {
+                if (textarea.value.trim()) {
+                    resolutions.push(textarea.value);
+                }
+            });
+            
+            if (resolutions.length > 0) {
+                appState.conflictResolutions.push({
+                    date: new Date().toISOString(),
+                    resolutions: resolutions
+                });
+                saveState();
+                
+                // Clear textareas
+                textareas.forEach(textarea => {
+                    textarea.value = '';
+                });
+                
+                // Show success
+                const lastTemplate = document.querySelectorAll('.conflict-template')[4];
+                const successMsg = document.createElement('div');
+                successMsg.className = 'success-message';
+                successMsg.textContent = 'Conflict resolution saved! You\'re learning to disagree in healthy ways.';
+                lastTemplate.appendChild(successMsg);
+                
+                setTimeout(() => {
+                    successMsg.remove();
+                }, 3000);
+            }
+        }
+
+        // Intimacy
+        function expandIntimacy(level) {
+            const content = level.querySelector('.expanded-content');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                level.style.background = 'linear-gradient(135deg, white, var(--soft-rose))';
+            } else {
+                content.style.display = 'none';
+                level.style.background = 'linear-gradient(135deg, var(--soft-rose), white)';
+            }
+        }
+
+        // Progress
+        function updateProgress() {
+            const devotionsComplete = appState.devotionalsCompleted.length;
+            const totalDevotions = 30;
+            const percentage = Math.round((devotionsComplete / totalDevotions) * 100);
+            
+            const progressBar = document.getElementById('overallProgress');
+            const progressText = document.getElementById('progressText');
+            
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+                if (percentage === 0) {
+                    progressText.textContent = 'Beginning Journey...';
+                } else if (percentage < 25) {
+                    progressText.textContent = `Building Foundation - ${percentage}%`;
+                } else if (percentage < 50) {
+                    progressText.textContent = `Growing Stronger - ${percentage}%`;
+                } else if (percentage < 75) {
+                    progressText.textContent = `Making Progress - ${percentage}%`;
+                } else if (percentage < 100) {
+                    progressText.textContent = `Nearly There - ${percentage}%`;
+                } else {
+                    progressText.textContent = `Journey Complete - ${percentage}%`;
+                }
+            }
+        }
+
+        function updateProgressStats() {
+            // Calculate days active
+            const startDate = appState.startDate ? new Date(appState.startDate) : new Date();
+            const today = new Date();
+            const daysActive = Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) + 1;
+            
+            document.getElementById('daysActive').textContent = daysActive;
+            document.getElementById('devotionsComplete').textContent = appState.devotionalsCompleted.length;
+            
+            const exercisesComplete = Object.keys(appState.forgivenessExercises).length;
+            document.getElementById('exercisesComplete').textContent = exercisesComplete;
+            
+            document.getElementById('conflictsResolved').textContent = appState.conflictResolutions.length;
+            
+            // Update progress circle
+            const latestScore = Object.values(appState.assessmentScores).pop() || 50;
+            const circle = document.getElementById('progressCircle');
+            const scoreText = document.getElementById('currentScore');
+            if (circle && scoreText) {
+                const circumference = 565;
+                const offset = circumference - (latestScore / 100) * circumference;
+                circle.style.strokeDashoffset = offset;
+                scoreText.textContent = latestScore;
+            }
+            
+            // Update milestones
+            const milestones = [];
+            if (daysActive >= 1) milestones.push('<div style="padding: 10px; background: var(--cream); border-radius: 8px; margin-bottom: 10px;">🎯 Started restoration journey</div>');
+            if (appState.devotionalsCompleted.length >= 7) milestones.push('<div style="padding: 10px; background: var(--cream); border-radius: 8px; margin-bottom: 10px;">📖 One week of devotionals</div>');
+            if (appState.devotionalsCompleted.length >= 15) milestones.push('<div style="padding: 10px; background: var(--cream); border-radius: 8px; margin-bottom: 10px;">⭐ Halfway through devotionals</div>');
+            if (exercisesComplete >= 2) milestones.push('<div style="padding: 10px; background: var(--cream); border-radius: 8px; margin-bottom: 10px;">🕊️ Working through forgiveness</div>');
+            if (appState.conflictResolutions.length >= 1) milestones.push('<div style="padding: 10px; background: var(--cream); border-radius: 8px; margin-bottom: 10px;">🗣️ Resolving conflicts healthily</div>');
+            if (appState.devotionalsCompleted.length >= 30) milestones.push('<div style="padding: 10px; background: var(--cream); border-radius: 8px; margin-bottom: 10px;">🏆 Completed 30-day journey!</div>');
+            
+            const milestonesEl = document.getElementById('milestones');
+            if (milestonesEl) {
+                milestonesEl.innerHTML = milestones.join('') || '<p style="color: var(--text);">Complete activities to earn milestones!</p>';
+            }
+            
+            // Update growth areas
+            const growthAreas = [];
+            if (appState.devotionalsCompleted.length > 0) {
+                growthAreas.push('<p>📖 Spiritual Connection: Growing through devotionals</p>');
+            }
+            if (exercisesComplete > 0) {
+                growthAreas.push('<p>🕊️ Forgiveness: Releasing past hurts</p>');
+            }
+            if (appState.conflictResolutions.length > 0) {
+                growthAreas.push('<p>🗣️ Communication: Learning healthy conflict resolution</p>');
+            }
+            
+            const growthEl = document.getElementById('growthAreas');
+            if (growthEl) {
+                growthEl.innerHTML = growthAreas.join('') || '<p style="color: var(--text);">Your growth areas will appear as you progress.</p>';
+            }
+        }
+
+        // Date/Time
+        function updateDateTime() {
+            const now = new Date();
+            const dateString = now.toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            const dashboardDate = document.getElementById('dashboardDate');
+            if (dashboardDate) {
+                dashboardDate.textContent = dateString;
+            }
+        }
+
+        // Audio
+        function toggleAudio() {
+            appState.audioEnabled = !appState.audioEnabled;
+            const buttons = document.querySelectorAll('.audio-toggle');
+            buttons.forEach(btn => {
+                btn.textContent = appState.audioEnabled ? '🔇' : '🔊';
+            });
+        }
+
+        // Modals
+        function showInfoModal() {
+            document.getElementById('infoModal').classList.add('active');
+        }
+
+        function showAboutModal() {
+            document.getElementById('aboutModal').classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        // Click outside modal to close
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+
+        // State Management
+        function saveState() {
+            localStorage.setItem('marriageRestorationState', JSON.stringify(appState));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem('marriageRestorationState');
+            if (saved) {
+                appState = { ...appState, ...JSON.parse(saved) };
+            }
+        }
+
+        // Initialize on load
+        window.addEventListener('load', initApp);
+    </script>
+</body>
+</html>
